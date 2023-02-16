@@ -16,24 +16,24 @@
 
 /* stylelint-disable color-no-hex */
 
-$color_nhsuk-blue: #005eb8;
-$color_nhsuk-white: #ffffff;
-$color_nhsuk-black: #212b32;
-$color_nhsuk-green: #007f3b;
-$color_nhsuk-purple: #330072;
-$color_nhsuk-dark-pink: #7C2855;
-$color_nhsuk-red: #d5281b;
-$color_nhsuk-yellow: #ffeb3b;
+$color_nhsuk-blue: #005eb8 !default;
+$color_nhsuk-white: #ffffff !default;
+$color_nhsuk-black: #212b32 !default;
+$color_nhsuk-green: #007f3b !default;
+$color_nhsuk-purple: #330072 !default;
+$color_nhsuk-dark-pink: #7C2855 !default;
+$color_nhsuk-red: #d5281b !default;
+$color_nhsuk-yellow: #ffeb3b !default;
 
 //
 // Secondary colours
 //
 
-$color_nhsuk-pale-yellow: #fff9c4;
-$color_nhsuk-warm-yellow: #ffb81C;
-$color_nhsuk-orange: #ED8B00;
-$color_nhsuk-aqua-green: #00A499;
-$color_nhsuk-pink: #AE2573;
+$color_nhsuk-pale-yellow: #fff9c4 !default;
+$color_nhsuk-warm-yellow: #ffb81C !default;
+$color_nhsuk-orange: #ED8B00 !default;
+$color_nhsuk-aqua-green: #00A499 !default;
+$color_nhsuk-pink: #AE2573 !default;
 
 //
 // Greyscale
@@ -100,54 +100,54 @@ $color_transparent_nhsuk-blue-50: rgba($color_shade_nhsuk-blue-50, .1);
 //
 
 // Text
-$nhsuk-text-color: $color_nhsuk-black;
-$nhsuk-secondary-text-color: $color_nhsuk-grey-1;
-$nhsuk-print-text-color: $color_nhsuk-black;
+$nhsuk-text-color: $color_nhsuk-black !default;
+$nhsuk-secondary-text-color: $color_nhsuk-grey-1 !default;
+$nhsuk-print-text-color: $color_nhsuk-black !default;
 
 // Links
-$nhsuk-link-color: $color_nhsuk-blue;
-$nhsuk-link-hover-color: $color_nhsuk-dark-pink;
-$nhsuk-link-active-color: shade($nhsuk-link-color, 50%);
-$nhsuk-link-visited-color: $color_nhsuk-purple;
+$nhsuk-link-color: $color_nhsuk-blue !default;
+$nhsuk-link-hover-color: $color_nhsuk-dark-pink !default;
+$nhsuk-link-active-color: shade($nhsuk-link-color, 50%) !default;
+$nhsuk-link-visited-color: $color_nhsuk-purple !default;
 
 // Focus
-$nhsuk-focus-color: $color_nhsuk-yellow;
-$nhsuk-focus-text-color: $color_nhsuk-black;
+$nhsuk-focus-color: $color_nhsuk-yellow !default;
+$nhsuk-focus-text-color: $color_nhsuk-black !default;
 
 // Border
-$nhsuk-border-color: $color_nhsuk-grey-4;
-$nhsuk-secondary-border-color: $color_transparent_nhsuk-white-20;
+$nhsuk-border-color: $color_nhsuk-grey-4 !default;
+$nhsuk-secondary-border-color: $color_transparent_nhsuk-white-20 !default;
 
 // Box shadow
-$nhsuk-box-shadow: rgba(33, 43, 50, .16);
-$nhsuk-box-shadow-color: $color_nhsuk-grey-1-rgb;
+$nhsuk-box-shadow: rgba(33, 43, 50, .16) !default;
+$nhsuk-box-shadow-color: $color_nhsuk-grey-1-rgb !default;
 
 //
 // Forms
 //
 
-$nhsuk-error-color: $color_nhsuk-red;
-$nhsuk-form-border-color: $color_nhsuk-grey-1;
-$nhsuk-form-element-background-color: $color_nhsuk-white;
+$nhsuk-error-color: $color_nhsuk-red !default;
+$nhsuk-form-border-color: $color_nhsuk-grey-1 !default;
+$nhsuk-form-element-background-color: $color_nhsuk-white !default;
 
 //
 // Buttons
 //
 
-$nhsuk-button-color: $color_nhsuk-green;
+$nhsuk-button-color: $color_nhsuk-green !default;
 $nhsuk-button-hover-color: shade($nhsuk-button-color, 20%);
 $nhsuk-button-active-color: shade($nhsuk-button-color, 50%);
 $nhsuk-button-shadow-color: shade($nhsuk-button-color, 50%);
 
-$nhsuk-secondary-button-color: $color_nhsuk-grey-1;
+$nhsuk-secondary-button-color: $color_nhsuk-grey-1 !default;
 $nhsuk-secondary-button-hover-color: shade($nhsuk-secondary-button-color, 20%);
 $nhsuk-secondary-button-active-color: shade($nhsuk-secondary-button-color, 50%);
 $nhsuk-secondary-button-shadow-color: shade($nhsuk-secondary-button-color, 50%);
 
-$nhsuk-reverse-button-color: $color_nhsuk-white;
+$nhsuk-reverse-button-color: $color_nhsuk-white !default;
 $nhsuk-reverse-button-hover-color: shade($nhsuk-reverse-button-color, 20%);
 $nhsuk-reverse-button-active-color: $color-nhsuk-black;
 $nhsuk-reverse-button-shadow-color: $color-nhsuk-black;
 
-$nhsuk-button-text-color: $color_nhsuk-white;
-$nhsuk-reverse-button-text-color: $color_nhsuk-black;
+$nhsuk-button-text-color: $color_nhsuk-white !default;
+$nhsuk-reverse-button-text-color: $color_nhsuk-black !default;
