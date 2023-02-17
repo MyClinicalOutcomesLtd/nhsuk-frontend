@@ -48,13 +48,14 @@ function copyBinaryAssets() {
 /**
  * Serve the static docs directory over localhost
  */
-function serve() {
+function serve(signalDone) {
   connect.server({
     host: '0.0.0.0',
     livereload: true,
     port: 3000,
     root: config.dest,
   });
+  signalDone();
 }
 
 /**
