@@ -1,5 +1,5 @@
 {
-  "name": "@MyClinicalOutcomesLtd/nhsuk-frontend",
+  "name": "@myclinicaloutcomesltd/nhsuk-frontend",
   "version": "6.2.1",
   "description": "NHS.UK frontend contains the code you need to start building user interfaces for NHS websites and services.",
   "scripts": {
