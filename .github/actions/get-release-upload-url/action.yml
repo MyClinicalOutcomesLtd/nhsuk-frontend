@@ -1,0 +1,10 @@
+name: Get Release Upload Url
+description: Uses the Github API to get the Upload url for a release from the current tag
+outputs:
+  upload_url:
+    description: |-
+      The upload_url for the release
+
+runs:
+  using: "node16"
+  main: "dist/index.js"
