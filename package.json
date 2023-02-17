@@ -59,7 +59,7 @@
     "webpack-stream": "^5.2.1"
   },
   "publishConfig": {
-    "registry": "hhttps://npm.pkg.github.com",
+    "registry": "https://npm.pkg.github.com",
     "access": "public"
   },
   "eslintConfig": {
