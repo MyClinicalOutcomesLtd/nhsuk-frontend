@@ -1,6 +1,6 @@
 {
   "name": "@myclinicaloutcomesltd/nhsuk-frontend",
-  "version": "6.2.1",
+  "version": "6.2.2",
   "description": "NHS.UK frontend contains the code you need to start building user interfaces for NHS websites and services.",
   "scripts": {
     "prepare": "gulp bundle",
