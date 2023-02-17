@@ -64,6 +64,11 @@ jobs:
           FOLDER: ./dist/app
           CLEAN: true
 
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+          registry-url: https://npm.pkg.github.com
+
       - name: Publish NPM package
         run: npm publish
         env:
