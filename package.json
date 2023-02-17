@@ -75,9 +75,9 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/nhsuk/nhsuk-frontend.git"
+    "url": "git+https://github.com/MyClinicalOutcomesLtd/nhsuk-frontend.git"
   },
-  "homepage": "https://nhsuk.github.io/nhsuk-frontend/",
+  "homepage": "https://MyClinicalOutcomesLtd.github.io/nhsuk-frontend/",
   "bugs": {
     "url": "https://github.com/nhsuk/nhsuk-frontend/issues"
   },
