@@ -38,7 +38,7 @@ jobs:
 
       - name: Get release details
         id: get_release
-        uses: .github/actions/get-release-upload-url
+        uses: ./.github/actions/get-release-upload-url
 
       - name: Upload release asset
         id: upload-release-asset
