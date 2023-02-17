@@ -3,7 +3,7 @@ name: Create release
 on:
   push:
     tags:
-      - 'v*'
+      - "v*"
 
 jobs:
   build:
@@ -39,6 +39,8 @@ jobs:
       - name: Get release details
         id: get_release
         uses: ./.github/actions/get-release-upload-url
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Upload release asset
         id: upload-release-asset
