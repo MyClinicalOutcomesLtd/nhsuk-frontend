@@ -39,7 +39,7 @@ function run() {
         try {
             const repoOptions = github.context.repo;
             const octokit = github.getOctokit(process.env.GITHUB_TOKEN);
-            const tag = github.context.ref;
+            const tag = github.context.ref.replace("refs/tags/", "");
             const release = yield octokit.rest.repos.getReleaseByTag(Object.assign(Object.assign({}, repoOptions), { tag }));
             core.setOutput("upload_url", release.data.upload_url);
         }

@@ -5,7 +5,7 @@ async function run() {
   try {
     const repoOptions = github.context.repo;
     const octokit = github.getOctokit(process.env.GITHUB_TOKEN as string);
-    const tag = github.context.ref
+    const tag = github.context.ref.replace("refs/tags/", "")
 
     const release = await octokit.rest.repos.getReleaseByTag({
         ...repoOptions,
