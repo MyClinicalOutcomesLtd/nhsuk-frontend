@@ -1,2 +1,2 @@
-*.js text=auto
-*.js text eol=lf
+# Enforce LF line endings
+* text=auto

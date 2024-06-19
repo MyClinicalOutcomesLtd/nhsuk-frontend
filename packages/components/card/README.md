@@ -33,21 +33,20 @@ Find out more about the card component and when to use it in the [NHS digital se
 }) }}
 ```
 
-### Clickable card
+### Primary card (with chevron)
 
-[Preview the clickable card component](https://nhsuk.github.io/nhsuk-frontend/components/card/clickable-card.html)
+[Preview the primary card component](https://nhsuk.github.io/nhsuk-frontend/components/card/card-primary.html)
 
 #### HTML markup
 
 ```
-<div class="nhsuk-card nhsuk-card--clickable ">
-  <div class="nhsuk-card__content">
+<div class="nhsuk-card nhsuk-card--clickable">
+  <div class="nhsuk-card__content nhsuk-card__content--primary">
     <h2 class="nhsuk-card__heading nhsuk-heading-m">
-      <a class="nhsuk-card__link" href="#">
-        Introduction to care and support
-      </a>
+      <a class="nhsuk-card__link" href="#">Introduction to care and support</a>
     </h2>
     <p class="nhsuk-card__description">A quick guide for people who have care and support needs and their carers</p>
+    <svg class="nhsuk-icon" xmlns="http://www.w3.org/2000/svg" width="27" height="27" aria-hidden="true" focusable="false"><circle cx="13.333" cy="13.333" r="13.333" fill=""></circle><g data-name="Group 1" fill="none" stroke="#fff" stroke-linecap="round" stroke-miterlimit="10" stroke-width="2.667"><path d="M15.438 13l-3.771 3.771"></path><path data-name="Path" d="M11.667 9.229L15.438 13"></path></g></svg>
   </div>
 </div>
 ```
@@ -59,11 +58,44 @@ Find out more about the card component and when to use it in the [NHS digital se
 
 {{ card({
   "href": "#",
+  "primary": "true",
   "clickable": "true",
   "heading": "Introduction to care and support",
   "headingClasses": "nhsuk-heading-m",
   "description": "A quick guide for people who have care and support needs and their carers"
 }) }}
+```
+
+### Secondary card
+
+[Preview the secondary card component](https://nhsuk.github.io/nhsuk-frontend/components/card/card-secondary.html)
+
+#### HTML markup
+
+```
+<div class="nhsuk-card nhsuk-card--clickable nhsuk-card--secondary">
+  <div class="nhsuk-card__content nhsuk-card__content--secondary">
+    <h2 class="nhsuk-card__heading nhsuk-heading-m">
+        <a class="nhsuk-card__link" href="#">Urgent and emergency care services</a>
+    </h2>
+  <p class="nhsuk-card__description">Services the NHS provides if you need urgent or emergency medical help</p>
+  </div>
+</div>
+```
+
+#### Nunjucks macro
+
+```
+{% from 'components/card/macro.njk' import card %}
+
+    {{ card({
+      "href": "#",
+      "clickable": "true",
+      "secondary": "true",
+      "heading": "Urgent and emergency care services",
+      "headingClasses": "nhsuk-heading-m",
+      "description": "Services the NHS provides if you need urgent or emergency medical help"
+    }) }}
 ```
 
 ### Card with an image
@@ -526,21 +558,23 @@ Find out more about the card component and when to use it in the [NHS digital se
 
 The card Nunjucks macro takes the following arguments:
 
-| Name                | Type     | Required  | Description  |
-| --------------------|----------|-----------|--------------|
-| **heading**         | string   | Yes       | Text heading of the card. If headingHtml is provided, the heading argument will be ignored. |
-| **headingHtml**         | string   | Yes       | HTML heading of the card. If headingHtml is provided, the heading argument will be ignored. |
-| **headingClasses**         | string   | No        | Optional additional classes to add to heading. Separate each class with a space. |
-| **headingLevel**    | integer  | No        | Optional heading level for the card heading. Default: 2 |
-| **href**            | string   | No       | The value of the card href attribute |
-| **clickable**            | boolean | No       | If set to true, then the class `nhsuk-card--clickable` will be applied. |
-| **feature**            | boolean | No       | If set to true, then the class `nhsuk-card__heading--feature` and `nhsuk-card__content--feature` will be applied. |
-| **type**                | string   | No       | Care card component variant type - non-urgent, urgent or emergency |
-| **imgURL**          | string   | No        | The URL of the image in the card |
-| **imgALT**          | string   | No        | The alternative text of the image in the card |
-| **description**     | string   | No        | Text description within the card content. If descriptionHtml is provided, the description argument will be ignored. |
-| **descriptionHtml**     | string   | No        | HTML to use within the card content. If descriptionHtml is provided, the description argument will be ignored. |
-| **classes**         | string   | No        | Optional additional classes to add to the card. Separate each class with a space. |
-| **attributes**      | object   | No        | Any extra HTML attributes (for example data attributes) to add to the card. |
+| Name                | Type    | Required | Description                                                                                                         |
+| ------------------- | ------- | -------- | ------------------------------------------------------------------------------------------------------------------- |
+| **heading**         | string  | Yes      | Text heading of the card. If headingHtml is provided, the heading argument will be ignored.                         |
+| **headingHtml**     | string  | Yes      | HTML heading of the card. If headingHtml is provided, the heading argument will be ignored.                         |
+| **headingClasses**  | string  | No       | Optional additional classes to add to heading. Separate each class with a space.                                    |
+| **headingLevel**    | integer | No       | Optional heading level for the card heading. Default: 2                                                             |
+| **href**            | string  | No       | The value of the card href attribute                                                                                |
+| **clickable**       | boolean | No       | If set to true, then the class `nhsuk-card--clickable` will be applied.                                             |
+| **feature**         | boolean | No       | If set to true, then the class `nhsuk-card__heading--feature` and `nhsuk-card__content--feature` will be applied.   |
+| **primary**         | boolean | No       | If set to true, then the class `nhsuk-card__content--primary` will be applied.                                      |
+| **secondary**       | boolean | No       | If set to true, then the class `nhsuk-card--secondary` and `nhsuk-card__content--secondary` will be applied.        |
+| **type**            | string  | No       | Care card component variant type - non-urgent, urgent or emergency                                                  |
+| **imgURL**          | string  | No       | The URL of the image in the card                                                                                    |
+| **imgALT**          | string  | No       | The alternative text of the image in the card                                                                       |
+| **description**     | string  | No       | Text description within the card content. If descriptionHtml is provided, the description argument will be ignored. |
+| **descriptionHtml** | string  | No       | HTML to use within the card content. If descriptionHtml is provided, the description argument will be ignored.      |
+| **classes**         | string  | No       | Optional additional classes to add to the card. Separate each class with a space.                                   |
+| **attributes**      | object  | No       | Any extra HTML attributes (for example data attributes) to add to the card.                                         |
 
 If you are using Nunjucks macros in production be aware that using `html` arguments, or ones ending with `html` can be a [security risk](https://developer.mozilla.org/en-US/docs/Glossary/Cross-site_scripting). Read more about this in the [Nunjucks documentation](https://mozilla.github.io/nunjucks/api.html#user-defined-templates-warning).
