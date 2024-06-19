@@ -59,7 +59,8 @@
 
 
 <header class="nhsuk-header" role="banner">
-  <div class="nhsuk-width-container nhsuk-header__container">
+  
+  <div class="nhsuk-header__container">
     <div class="nhsuk-header__logo nhsuk-header__logo--only"><a class="nhsuk-header__link" href="/nhsuk-frontend/" aria-label="NHS homepage">
         
   <svg class="nhsuk-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 16" height="40" width="100">
@@ -71,9 +72,9 @@
     </div>
 
     </div>
+    
 
     </header>
-
 
 
 
@@ -83,9 +84,19 @@
   <nav class="nhsuk-breadcrumb" aria-label="Breadcrumb">
   <div class="nhsuk-width-container">
     <ol class="nhsuk-breadcrumb__list">
-      <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../">NHS.UK frontend</a></li>
+          <li class="nhsuk-breadcrumb__item"><a class="nhsuk-breadcrumb__link" href="../">NHS.UK frontend</a></li>
+    
+      
+      
+      
+    
     </ol>
-    <p class="nhsuk-breadcrumb__back"><a class="nhsuk-breadcrumb__backlink" href="../">Back to NHS.UK frontend</a></p>
+    <p class="nhsuk-breadcrumb__back">
+      <a class="nhsuk-breadcrumb__backlink" href="../" >
+        <span class="nhsuk-u-visually-hidden">Back to &nbsp;</span>
+        NHS.UK frontend
+      </a>
+    </p>
   </div>
 </nav>
 
@@ -125,13 +136,18 @@
     <li><a href="../components/button/secondary.html">Button secondary</a></li>
     <li><a href="../components/button/reverse.html">Button reverse</a></li>
     <li><a href="../components/card/basic-card.html">Card - Basic card</a></li>
-    <li><a href="../components/card/clickable-card.html">Card - Clickable card</a></li>
     <li><a href="../components/card/card-with-image.html">Card - Card with an image</a></li>
     <li><a href="../components/card/card-group.html">Card - Card group</a></li>
     <li><a href="../components/card/feature-card.html">Card - Feature card</a></li>
+    <li><a href="../components/card/card-primary.html">Card - Primary card (with chevron)</a></li>
+    <li><a href="../components/card/card-secondary.html">Card - Secondary card</a></li>
+    <li><a href="../components/card/top-task-card.html">Card - Top task card</a></li>
     <li><a href="../components/card/care-card-non-urgent.html">Card - Care card non-urgent (blue)</a></li>
     <li><a href="../components/card/care-card-urgent.html">Card - Care card urgent (red)</a></li>
     <li><a href="../components/card/care-card-emergency.html">Card - Care card emergency (red and black)</a></li>
+    <li><a href="../components/character-count/index.html">Character count - max characters</a></li>
+    <li><a href="../components/character-count/with-threshold.html">Character count - with threshold</a></li>
+    <li><a href="../components/character-count/with-word-count.html">Character count - max words</a></li>
     <li><a href="../components/checkboxes/index.html">Checkboxes</a></li>
     <li><a href="../components/checkboxes/hint.html">Checkboxes with hint text</a></li>
     <li><a href="../components/checkboxes/disabled.html">Checkboxes with disabled item</a></li>
@@ -155,14 +171,14 @@
     <li><a href="../components/fieldset/index.html">Fieldset</a></li>
     <li><a href="../components/fieldset/page-heading.html">Fieldset as page heading</a></li>
     <li><a href="../components/fieldset/with-inputs.html">Fieldset with inputs</a></li>
-    <li><a href="../components/footer/index.html">Footer</a></li>
-    <li><a href="../components/header/index.html">Header</a></li>
+    <li><a href="../components/footer/index.html">Footer (default)</a></li>
+    <li><a href="../components/footer/footer-in-columns.html">Footer (columns)</a></li>
+    <li><a href="../components/header/index.html">Header (default)</a></li>
     <li><a href="../components/header/header-navigation.html">Header with navigation</a></li>
     <li><a href="../components/header/header-search.html">Header with search</a></li>
     <li><a href="../components/header/header-logo.html">Header with logo only</a></li>
     <li><a href="../components/header/header-service-name.html">Header with a service name</a></li>
     <li><a href="../components/header/header-service-name-with-nav.html">Header with a service name, search and navigation</a></li>
-    <li><a href="../components/header/header-transactional.html">Header transactional</a></li>
     <li><a href="../components/header/header-transactional-service-name.html">Header transactional with service name</a></li>
     <li><a href="../components/header/header-org.html">Header organisational</a></li>
     <li><a href="../components/header/header-org-white.html">Header organisational with white header</a></li>
@@ -177,6 +193,10 @@
     <li><a href="../components/input/hint.html">Input with hint text</a></li>
     <li><a href="../components/input/error.html">Input with error message</a></li>
     <li><a href="../components/input/custom-width.html">Input with width modifier</a></li>
+    <li><a href="../components/input/prefix.html">Input with prefix</a></li>
+    <li><a href="../components/input/suffix.html">Input with suffix</a></li>
+    <li><a href="../components/input/prefix-and-suffix.html">Input with prefix and suffix</a></li>
+    <li><a href="../components/input/error-and-prefix-and-suffix.html">Input with error message, prefix and suffix</a></li>
     <li><a href="../components/inset-text/index.html">Inset text</a></li>
     <li><a href="../components/label/index.html">Label</a></li>
     <li><a href="../components/label/bold.html">Label with bold text</a></li>
@@ -200,12 +220,18 @@
     <li><a href="../components/tables/index.html">Table</a></li>
     <li><a href="../components/tables/responsive-table.html">Responsive table</a></li>
     <li><a href="../components/tables/tables-panel.html">Table as a panel</a></li>
+    <li><a href="../components/tabs/index.html">Tabs</a> <strong class="nhsuk-tag nhsuk-tag--yellow">Experimental</strong></li>
     <li><a href="../components/tag/index.html">Tag</a></li>
     <li><a href="../components/textarea/index.html">Textarea</a></li>
     <li><a href="../components/textarea/autocomplete.html">Textarea with autocomplete attribute</a></li>
     <li><a href="../components/textarea/error.html">Textarea with error message</a></li>
     <li><a href="../components/warning-callout/index.html">Warning callout</a></li>
     <li><a href="../components/warning-callout/custom-heading.html">Warning callout with custom heading</a></li>
+  </ul>
+
+  <h2>Styles</h2>
+  <ul class="nhsuk-list">
+    <li><a href="../styles/lists.html">Lists</a></li>
   </ul>
 
         </div>
@@ -219,20 +245,35 @@
       
 
   <footer role="contentinfo">
-  <div class="nhsuk-footer" id="nhsuk-footer">
+  <div class="nhsuk-footer-container">
     <div class="nhsuk-width-container">
       <h2 class="nhsuk-u-visually-hidden">Support links</h2>
-      <ul class="nhsuk-footer__list">
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/">NHS.UK frontend</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/pages/install.html">Install</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/pages/examples.html">Examples</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/pages/about.html">About</a></li>
-        <li class="nhsuk-footer__list-item"><a class="nhsuk-footer__list-item-link" href="https://github.com/nhsuk/nhsuk-frontend">GitHub</a></li>
-      </ul>
-      
-      <p class="nhsuk-footer__copyright">&copy; Crown copyright</p>
-    </div>
-  </div>
+      <div class="nhsuk-footer">
+          
+              <ul class="nhsuk-footer__list">
+                  <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item">
+                    <a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/">NHS.UK frontend</a>
+                  </li>
+                  <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item">
+                    <a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/pages/install.html">Install</a>
+                  </li>
+                  <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item">
+                    <a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/pages/examples.html">Examples</a>
+                  </li>
+                  <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item">
+                    <a class="nhsuk-footer__list-item-link" href="/nhsuk-frontend/pages/about.html">About</a>
+                  </li>
+                  <li class="nhsuk-footer__list-item nhsuk-footer-default__list-item">
+                    <a class="nhsuk-footer__list-item-link" href="https://github.com/nhsuk/nhsuk-frontend">GitHub</a>
+                  </li>
+              </ul>
+              <div>
+                <p class="nhsuk-footer__copyright">&copy; NHS England</p>
+              </div>
+      </div> 
+          
+    </div> 
+  </div> 
 </footer>
 
 
