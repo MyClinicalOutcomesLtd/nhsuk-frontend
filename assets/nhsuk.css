@@ -86,7 +86,7 @@ a:active {
   a:after {
     color: #212b32;
     content: " (Link: " attr(href) ")"; /* [1] */
-    font-size: 14pt; /* [2] */
+    font-size: inherit; /* [2] */
   }
 }
 
@@ -188,6 +188,7 @@ td {
   padding-bottom: 8px;
   padding-right: 16px;
   padding-top: 8px;
+  padding-left: 0;
   border-bottom: 1px solid #d8dde0;
   text-align: left;
   vertical-align: top;
@@ -203,8 +204,8 @@ td {
 @media print {
   th,
   td {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -236,22 +237,22 @@ th {
 
 caption {
   font-weight: 600;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.55556;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.42105;
   text-align: left;
 }
 @media (min-width: 40.0625em) {
   caption {
     font-size: 22px;
     font-size: 1.375rem;
-    line-height: 1.45455;
+    line-height: 1.36364;
   }
 }
 @media print {
   caption {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 15pt;
+    line-height: 1.25;
   }
 }
 
@@ -386,19 +387,9 @@ caption {
  *    so it uses CSS initial value, which is inline.
  */
 .nhsuk-main-wrapper {
-  padding-top: 40px;
-  padding-bottom: 40px;
   display: block; /* [1] */
-}
-@media (min-width: 40.0625em) {
-  .nhsuk-main-wrapper {
-    padding-top: 48px;
-  }
-}
-@media (min-width: 40.0625em) {
-  .nhsuk-main-wrapper {
-    padding-bottom: 48px;
-  }
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .nhsuk-main-wrapper > *:first-child {
   margin-top: 0;
@@ -406,9 +397,15 @@ caption {
 .nhsuk-main-wrapper > *:last-child {
   margin-bottom: 0;
 }
+@media (min-width: 40.0625em) {
+  .nhsuk-main-wrapper {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+}
 
 .nhsuk-main-wrapper--l {
-  padding-top: 48px;
+  padding-top: 40px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-main-wrapper--l {
@@ -417,17 +414,13 @@ caption {
 }
 
 .nhsuk-main-wrapper--s {
-  padding-bottom: 24px;
-  padding-top: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-main-wrapper--s {
-    padding-bottom: 32px;
-  }
-}
-@media (min-width: 40.0625em) {
-  .nhsuk-main-wrapper--s {
-    padding-top: 32px;
+    padding-top: 24px;
+    padding-bottom: 24px;
   }
 }
 
@@ -591,8 +584,8 @@ ol, ul, .nhsuk-list {
 }
 @media print {
   ol, ul, .nhsuk-list {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -722,7 +715,7 @@ h1,
 .nhsuk-heading-xl {
   font-size: 32px;
   font-size: 2rem;
-  line-height: 1.25;
+  line-height: 1.1875;
   display: block;
   font-weight: 600;
   margin-top: 0;
@@ -733,13 +726,13 @@ h1,
   .nhsuk-heading-xl {
     font-size: 48px;
     font-size: 3rem;
-    line-height: 1.16667;
+    line-height: 1.125;
   }
 }
 @media print {
   h1,
   .nhsuk-heading-xl {
-    font-size: 32pt;
+    font-size: 26pt;
     line-height: 1.15;
   }
 }
@@ -752,9 +745,9 @@ h1,
 
 h2,
 .nhsuk-heading-l {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.33333;
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 1.22222;
   display: block;
   font-weight: 600;
   margin-top: 0;
@@ -763,16 +756,16 @@ h2,
 @media (min-width: 40.0625em) {
   h2,
   .nhsuk-heading-l {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1.25;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.16667;
   }
 }
 @media print {
   h2,
   .nhsuk-heading-l {
-    font-size: 24pt;
-    line-height: 1.05;
+    font-size: 20pt;
+    line-height: 1.2;
   }
 }
 @media (min-width: 40.0625em) {
@@ -784,9 +777,9 @@ h2,
 
 h3,
 .nhsuk-heading-m {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
   display: block;
   font-weight: 600;
   margin-top: 0;
@@ -795,16 +788,16 @@ h3,
 @media (min-width: 40.0625em) {
   h3,
   .nhsuk-heading-m {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
   }
 }
 @media print {
   h3,
   .nhsuk-heading-m {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 17pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -816,9 +809,9 @@ h3,
 
 h4,
 .nhsuk-heading-s {
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.55556;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.42105;
   display: block;
   font-weight: 600;
   margin-top: 0;
@@ -829,14 +822,14 @@ h4,
   .nhsuk-heading-s {
     font-size: 22px;
     font-size: 1.375rem;
-    line-height: 1.45455;
+    line-height: 1.36364;
   }
 }
 @media print {
   h4,
   .nhsuk-heading-s {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 15pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -867,8 +860,8 @@ h5,
 @media print {
   h5,
   .nhsuk-heading-xs {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -899,8 +892,8 @@ h6,
 @media print {
   h6,
   .nhsuk-heading-xxs {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -913,47 +906,47 @@ h6,
 /* Captions to be used inside headings */
 .nhsuk-caption-xl {
   font-weight: 400;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.33333;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
   color: #4c6272;
   display: block;
   margin-bottom: 4px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-caption-xl {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1.25;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
   }
 }
 @media print {
   .nhsuk-caption-xl {
-    font-size: 24pt;
-    line-height: 1.05;
+    font-size: 17pt;
+    line-height: 1.25;
   }
 }
 
 .nhsuk-caption-l {
   font-weight: 400;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.42105;
   color: #4c6272;
   display: block;
   margin-bottom: 4px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-caption-l {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 1.36364;
   }
 }
 @media print {
   .nhsuk-caption-l {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 15pt;
+    line-height: 1.25;
   }
 }
 
@@ -974,8 +967,8 @@ h6,
 }
 @media print {
   .nhsuk-caption-m {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -997,13 +990,13 @@ h6,
   .nhsuk-body-l {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-body-l {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -1032,8 +1025,8 @@ address, p,
 @media print {
   address, p,
   .nhsuk-body-m {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -1065,8 +1058,8 @@ p,
 }
 @media print {
   .nhsuk-body-s {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 @media (min-width: 40.0625em) {
@@ -1097,13 +1090,13 @@ address {
   .nhsuk-lede-text {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-lede-text {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -1123,14 +1116,14 @@ address {
   .nhsuk-lede-text ul {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-lede-text p,
   .nhsuk-lede-text ul {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 
@@ -1150,8 +1143,8 @@ address {
 }
 @media print {
   .nhsuk-lede-text--small {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -1293,6 +1286,84 @@ b {
   font-weight: 600;
 }
 
+@media print {
+  .nhsuk-main-wrapper {
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  h1,
+  .nhsuk-heading-xl,
+  h2,
+  .nhsuk-heading-l,
+  h3,
+  .nhsuk-heading-m,
+  h4,
+  .nhsuk-heading-s,
+  h5,
+  .nhsuk-heading-xs,
+  h6,
+  .nhsuk-heading-xxs,
+  .nhsuk-lede-text,
+  .nhsuk-body-l,
+  p,
+  .nhsuk-body-m,
+  .nhsuk-body-s,
+  address,
+  ol,
+  ul,
+  .nhsuk-list {
+    margin-bottom: 7.5pt;
+  }
+  h1 {
+    margin-bottom: 15pt !important;
+  }
+  .nhsuk-body-l + h2,
+  .nhsuk-body-l + .nhsuk-heading-l,
+  p + h2,
+  .nhsuk-body-m + h2,
+  address + h2,
+  p + .nhsuk-heading-l,
+  .nhsuk-body-m + .nhsuk-heading-l,
+  address + .nhsuk-heading-l,
+  .nhsuk-body-s + h2,
+  .nhsuk-body-s + .nhsuk-heading-l,
+  .nhsuk-list + h2,
+  ul + h2,
+  ol + h2,
+  .nhsuk-list + .nhsuk-heading-l,
+  ul + .nhsuk-heading-l,
+  ol + .nhsuk-heading-l,
+  p + h3,
+  .nhsuk-body-m + h3,
+  address + h3,
+  p + .nhsuk-heading-m,
+  .nhsuk-body-m + .nhsuk-heading-m,
+  address + .nhsuk-heading-m,
+  .nhsuk-body-s + h3,
+  .nhsuk-body-s + .nhsuk-heading-m,
+  .nhsuk-list + h3,
+  ul + h3,
+  ol + h3,
+  .nhsuk-list + .nhsuk-heading-m,
+  ul + .nhsuk-heading-m,
+  ol + .nhsuk-heading-m,
+  p + h4,
+  .nhsuk-body-m + h4,
+  address + h4,
+  p + .nhsuk-heading-s,
+  .nhsuk-body-m + .nhsuk-heading-s,
+  address + .nhsuk-heading-s,
+  .nhsuk-body-s + h4,
+  .nhsuk-body-s + .nhsuk-heading-s,
+  .nhsuk-list + h4,
+  ul + h4,
+  ol + h4,
+  .nhsuk-list + .nhsuk-heading-s,
+  ul + .nhsuk-heading-s,
+  ol + .nhsuk-heading-s {
+    padding-top: 0.45em;
+  }
+}
 /* ==========================================================================
    UTILITIES / #CLEARFIX
    ========================================================================== */
@@ -2401,18 +2472,18 @@ b {
 .nhsuk-u-font-size-64 {
   font-size: 48px !important;
   font-size: 3rem !important;
-  line-height: 1.16667 !important;
+  line-height: 1.125 !important;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-u-font-size-64 {
     font-size: 64px !important;
     font-size: 4rem !important;
-    line-height: 1.125 !important;
+    line-height: 1.09375 !important;
   }
 }
 @media print {
   .nhsuk-u-font-size-64 {
-    font-size: 53pt !important;
+    font-size: 34pt !important;
     line-height: 1.1 !important;
   }
 }
@@ -2420,38 +2491,57 @@ b {
 .nhsuk-u-font-size-48 {
   font-size: 32px !important;
   font-size: 2rem !important;
-  line-height: 1.25 !important;
+  line-height: 1.1875 !important;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-u-font-size-48 {
     font-size: 48px !important;
     font-size: 3rem !important;
-    line-height: 1.16667 !important;
+    line-height: 1.125 !important;
   }
 }
 @media print {
   .nhsuk-u-font-size-48 {
-    font-size: 32pt !important;
+    font-size: 26pt !important;
     line-height: 1.15 !important;
   }
 }
 
-.nhsuk-u-font-size-32 {
-  font-size: 24px !important;
-  font-size: 1.5rem !important;
-  line-height: 1.33333 !important;
+.nhsuk-u-font-size-36 {
+  font-size: 27px !important;
+  font-size: 1.6875rem !important;
+  line-height: 1.22222 !important;
 }
 @media (min-width: 40.0625em) {
-  .nhsuk-u-font-size-32 {
-    font-size: 32px !important;
-    font-size: 2rem !important;
-    line-height: 1.25 !important;
+  .nhsuk-u-font-size-36 {
+    font-size: 36px !important;
+    font-size: 2.25rem !important;
+    line-height: 1.16667 !important;
   }
 }
 @media print {
-  .nhsuk-u-font-size-32 {
-    font-size: 24pt !important;
-    line-height: 1.05 !important;
+  .nhsuk-u-font-size-36 {
+    font-size: 20pt !important;
+    line-height: 1.2 !important;
+  }
+}
+
+.nhsuk-u-font-size-26 {
+  font-size: 22px !important;
+  font-size: 1.375rem !important;
+  line-height: 1.31818 !important;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-u-font-size-26 {
+    font-size: 26px !important;
+    font-size: 1.625rem !important;
+    line-height: 1.23077 !important;
+  }
+}
+@media print {
+  .nhsuk-u-font-size-26 {
+    font-size: 17pt !important;
+    line-height: 1.25 !important;
   }
 }
 
@@ -2464,32 +2554,32 @@ b {
   .nhsuk-u-font-size-24 {
     font-size: 24px !important;
     font-size: 1.5rem !important;
-    line-height: 1.33333 !important;
+    line-height: 1.29167 !important;
   }
 }
 @media print {
   .nhsuk-u-font-size-24 {
-    font-size: 18pt !important;
-    line-height: 1.15 !important;
+    font-size: 16pt !important;
+    line-height: 1.25 !important;
   }
 }
 
 .nhsuk-u-font-size-22 {
-  font-size: 18px !important;
-  font-size: 1.125rem !important;
-  line-height: 1.55556 !important;
+  font-size: 19px !important;
+  font-size: 1.1875rem !important;
+  line-height: 1.42105 !important;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-u-font-size-22 {
     font-size: 22px !important;
     font-size: 1.375rem !important;
-    line-height: 1.45455 !important;
+    line-height: 1.36364 !important;
   }
 }
 @media print {
   .nhsuk-u-font-size-22 {
-    font-size: 18pt !important;
-    line-height: 1.15 !important;
+    font-size: 15pt !important;
+    line-height: 1.25 !important;
   }
 }
 
@@ -2507,8 +2597,8 @@ b {
 }
 @media print {
   .nhsuk-u-font-size-19 {
-    font-size: 14pt !important;
-    line-height: 1.15 !important;
+    font-size: 13pt !important;
+    line-height: 1.25 !important;
   }
 }
 
@@ -2526,8 +2616,8 @@ b {
 }
 @media print {
   .nhsuk-u-font-size-16 {
-    font-size: 14pt !important;
-    line-height: 1.2 !important;
+    font-size: 12pt !important;
+    line-height: 1.3 !important;
   }
 }
 
@@ -2546,7 +2636,7 @@ b {
 @media print {
   .nhsuk-u-font-size-14 {
     font-size: 12pt !important;
-    line-height: 1.2 !important;
+    line-height: 1.3 !important;
   }
 }
 
@@ -2595,6 +2685,12 @@ b {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+.nhsuk-u-visually-hidden::before {
+  content: " ";
+}
+.nhsuk-u-visually-hidden::after {
+  content: " ";
 }
 
 /* ==========================================================================
@@ -2681,9 +2777,9 @@ b {
 
 .nhsuk-action-link__link {
   font-weight: 400;
-  font-size: 18px;
-  font-size: 1.125rem;
-  line-height: 1.55556;
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.42105;
   display: inline-block; /* [1] */
   font-weight: 600;
   padding-left: 38px; /* [2] */
@@ -2694,13 +2790,13 @@ b {
   .nhsuk-action-link__link {
     font-size: 22px;
     font-size: 1.375rem;
-    line-height: 1.45455;
+    line-height: 1.36364;
   }
 }
 @media print {
   .nhsuk-action-link__link {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 15pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-action-link__link:hover .nhsuk-action-link__text {
@@ -2735,7 +2831,7 @@ b {
   height: 36px;
   left: -3px;
   position: absolute;
-  top: -2px;
+  top: -3px;
   width: 36px;
 }
 @media print {
@@ -2752,7 +2848,7 @@ b {
     height: 24px;
     left: -2px;
     margin-bottom: 0;
-    top: 2px;
+    top: 1px;
     width: 24px;
   }
 }
@@ -2764,9 +2860,16 @@ b {
  * 1. Allow space for the arrow.
  * 2. Align the icon with the start of the back link.
  * 3. Align the icon with the middle of the text.
+ * 4. Make back link same height as breadcrumb.
  */
 .nhsuk-back-link {
-  margin-bottom: 16px;
+  margin-top: 16px;
+  line-height: 1; /* 4 */
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-back-link {
+    margin-top: 24px;
+  }
 }
 
 .nhsuk-back-link__link {
@@ -2791,8 +2894,8 @@ b {
 }
 @media print {
   .nhsuk-back-link__link {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 .nhsuk-back-link__link:visited {
@@ -2828,6 +2931,11 @@ b {
   top: -1px; /* 3 */
   width: 24px;
 }
+@media (min-width: 40.0625em) {
+  .nhsuk-back-link__link .nhsuk-icon__chevron-left {
+    top: 0; /* 3 */
+  }
+}
 .nhsuk-back-link__link:visited {
   color: #005eb8;
 }
@@ -2847,28 +2955,33 @@ b {
    ========================================================================== */
 /**
  * 1. Hide the breadcrumb on print stylesheets.
- * 2. Bespoke spacing numbers used as there is no 20px
- *    spacing mapped in settings/spacing.
  * 3. Don't show the full breadcrumb below tablet size.
  * 4. Typography sizing mixin, see core/tools/_typography
  * 5. and core/settings/_typography for size maps.
  * 5. .. but show a back to index page link.
+ * 6. Spacing to align the chevron with breadcrumb items
  */
 .nhsuk-breadcrumb {
   /* [1] */
-  padding-bottom: 16px;
-  padding-top: 20px; /* [2] */
+  margin-top: 16px;
 }
 @media print {
   .nhsuk-breadcrumb {
     display: none;
   }
 }
-.nhsuk-breadcrumb + .nhsuk-width-container .nhsuk-main-wrapper {
-  padding-top: 0;
+@media (min-width: 40.0625em) {
+  .nhsuk-breadcrumb {
+    margin-top: 24px;
+  }
 }
 
 .nhsuk-breadcrumb__list {
+  font-weight: 400;
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.71429;
+  /* [4] */
   list-style: none;
   margin: 0;
   padding: 0;
@@ -2876,6 +2989,19 @@ b {
 @media (max-width: 40.0525em) {
   .nhsuk-breadcrumb__list {
     display: none; /* [3] */
+  }
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-breadcrumb__list {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+@media print {
+  .nhsuk-breadcrumb__list {
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 
@@ -2897,18 +3023,19 @@ b {
 }
 @media print {
   .nhsuk-breadcrumb__item {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 .nhsuk-breadcrumb__item:not(:last-child):after {
-  background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23aeb7bd' height='18' width='18' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E") right 0 top 4px no-repeat;
+  background: url("data:image/svg+xml,%3Csvg class='nhsuk-icon nhsuk-icon__chevron-right' xmlns='http://www.w3.org/2000/svg' fill='%23aeb7bd' height='18' width='18' viewBox='0 0 24 24' aria-hidden='true'%3E%3Cpath d='M15.5 12a1 1 0 0 1-.29.71l-5 5a1 1 0 0 1-1.42-1.42l4.3-4.29-4.3-4.29a1 1 0 0 1 1.42-1.42l5 5a1 1 0 0 1 .29.71z'%3E%3C/path%3E%3C/svg%3E") right 0 top 0 no-repeat;
   content: "";
   display: inline-block;
-  height: 18px;
-  margin-left: 10px;
-  margin-right: 2px;
-  width: 18px;
+  height: 19px; /* [6] */
+  margin-left: 9px; /* [6] */
+  margin-right: 2px; /* [6] */
+  vertical-align: middle; /* [6] */
+  width: 18px; /* [6] */
 }
 
 .nhsuk-breadcrumb__link:visited {
@@ -2940,8 +3067,8 @@ b {
 }
 @media print {
   .nhsuk-breadcrumb__back {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 @media (min-width: 40.0625em) {
@@ -2956,10 +3083,13 @@ b {
   height: 18px;
   left: 0;
   position: absolute;
-  top: 0;
+  top: -1px;
   width: 10px;
 }
 
+.nhsuk-breadcrumb__backlink {
+  text-decoration: none;
+}
 .nhsuk-breadcrumb__backlink:visited {
   color: #005eb8;
 }
@@ -3011,8 +3141,8 @@ b {
 }
 @media print {
   .nhsuk-button {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -3126,6 +3256,29 @@ b {
 }
 .nhsuk-button--reverse.nhsuk-button--disabled:focus {
   background-color: #ffffff;
+}
+
+.nhsuk-button--warning {
+  background-color: #d5281b;
+  box-shadow: 0 4px 0 #6b140e;
+}
+.nhsuk-button--warning:hover {
+  background-color: #a82015;
+}
+.nhsuk-button--warning:focus {
+  background: #ffeb3b;
+  box-shadow: 0 4px 0 #212b32;
+  color: #212b32;
+  outline: 4px solid transparent;
+}
+.nhsuk-button--warning:active {
+  background: #6b140e;
+  box-shadow: none;
+  color: #ffffff;
+  top: 4px;
+}
+.nhsuk-button--warning.nhsuk-button--disabled {
+  background-color: #d5281b;
 }
 
 /**
@@ -3415,23 +3568,23 @@ b {
 
 .nhsuk-card--care__heading {
   font-weight: 600;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
   margin: 0;
   padding-top: 0; /* [13] */
 }
 @media (min-width: 40.0625em) {
   .nhsuk-card--care__heading {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
   }
 }
 @media print {
   .nhsuk-card--care__heading {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 17pt;
+    line-height: 1.25;
   }
 }
 @media print {
@@ -3515,6 +3668,12 @@ b {
 }
 .nhsuk-card--care--emergency .nhsuk-card__content a:focus {
   color: #212b32; /* [16] */
+}
+@media print {
+  .nhsuk-card--care--emergency .nhsuk-card__content {
+    background-color: white;
+    color: #212b32;
+  }
 }
 .nhsuk-card--care--emergency .nhsuk-details,
 .nhsuk-card--care--emergency .nhsuk-details__summary {
@@ -3680,8 +3839,8 @@ b {
 }
 @media print {
   .nhsuk-details {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -3960,13 +4119,13 @@ b {
   .nhsuk-do-dont-list__label {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-do-dont-list__label {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 @media (max-width: 40.0525em) {
@@ -4016,8 +4175,8 @@ b {
 }
 @media print {
   .nhsuk-error-message {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -4030,7 +4189,7 @@ b {
  */
 .nhsuk-error-summary {
   padding: 16px;
-  margin-bottom: 48px;
+  margin-bottom: 32px;
   border: 4px solid #d5281b;
 }
 @media (min-width: 40.0625em) {
@@ -4040,7 +4199,7 @@ b {
 }
 @media (min-width: 40.0625em) {
   .nhsuk-error-summary {
-    margin-bottom: 56px;
+    margin-bottom: 48px;
   }
 }
 @media (min-width: 40.0625em) {
@@ -4056,23 +4215,23 @@ b {
 
 .nhsuk-error-summary__title {
   font-weight: 600;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
   margin-top: 0;
   margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-error-summary__title {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
   }
 }
 @media print {
   .nhsuk-error-summary__title {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 17pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -4096,8 +4255,8 @@ b {
 }
 @media print {
   .nhsuk-error-summary__body {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-error-summary__body p {
@@ -4176,8 +4335,8 @@ b {
 }
 @media print {
   .nhsuk-fieldset__legend {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -4186,62 +4345,62 @@ b {
   font-weight: 600;
   font-size: 32px;
   font-size: 2rem;
-  line-height: 1.25;
+  line-height: 1.1875;
   margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-fieldset__legend--xl {
     font-size: 48px;
     font-size: 3rem;
-    line-height: 1.16667;
+    line-height: 1.125;
   }
 }
 @media print {
   .nhsuk-fieldset__legend--xl {
-    font-size: 32pt;
+    font-size: 26pt;
     line-height: 1.15;
   }
 }
 
 .nhsuk-fieldset__legend--l {
   font-weight: 600;
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.33333;
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 1.22222;
   margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-fieldset__legend--l {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1.25;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.16667;
   }
 }
 @media print {
   .nhsuk-fieldset__legend--l {
-    font-size: 24pt;
-    line-height: 1.05;
+    font-size: 20pt;
+    line-height: 1.2;
   }
 }
 
 .nhsuk-fieldset__legend--m {
   font-weight: 600;
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
   margin-bottom: 16px;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-fieldset__legend--m {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
   }
 }
 @media print {
   .nhsuk-fieldset__legend--m {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 17pt;
+    line-height: 1.25;
   }
 }
 
@@ -4261,8 +4420,8 @@ b {
 }
 @media print {
   .nhsuk-fieldset__legend--s {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -4355,8 +4514,8 @@ b {
 }
 @media print {
   .nhsuk-footer__list-item {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 @media (min-width: 48.0625em) {
@@ -4400,8 +4559,8 @@ b {
 }
 @media print {
   .nhsuk-footer__copyright {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 
@@ -4450,14 +4609,8 @@ b {
     margin: 0 auto;
   }
 }
-@media (max-width: 40.0525em) {
-  .nhsuk-header__container {
-    padding-bottom: 0;
-  }
-}
 @media (min-width: 40.0625em) {
   .nhsuk-header__container {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     display: flex;
     justify-content: space-between;
   }
@@ -4532,11 +4685,6 @@ b {
 .nhsuk-header__logo--only {
   max-width: 100%;
 }
-@media (max-width: 40.0525em) {
-  .nhsuk-header__logo--only {
-    padding-bottom: 16px;
-  }
-}
 @media (min-width: 40.0625em) {
   .nhsuk-header__logo--only .nhsuk-header__link--service {
     align-items: center;
@@ -4575,10 +4723,6 @@ b {
   .nhsuk-header__search {
     margin-left: 8px;
   }
-}
-
-.nhsuk-header__search-no-nav {
-  padding-bottom: 16px;
 }
 
 .nhsuk-header__search-form {
@@ -4765,7 +4909,7 @@ b {
   color: #ffffff;
   display: block;
   font-size: inherit;
-  padding: 16px 12px;
+  padding: 16px 2px;
   text-decoration: underline;
   white-space: nowrap;
 }
@@ -4778,13 +4922,13 @@ b {
 }
 @media print {
   .nhsuk-header__navigation-link {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 @media (min-width: 40.0625em) {
   .nhsuk-header__navigation-link {
-    padding: 12px 16px;
+    padding: 12px 2px;
   }
 }
 .nhsuk-header__navigation-link .nhsuk-icon__chevron-right {
@@ -4849,12 +4993,10 @@ b {
   z-index: 1;
 }
 .nhsuk-header__menu-toggle.nhsuk-header__navigation-link {
-  padding-right: 30px;
+  padding-right: 23px;
 }
-@media (min-width: 48.0625em) {
-  .nhsuk-header__menu-toggle {
-    display: none;
-  }
+.nhsuk-header__menu-toggle .nhsuk-icon__chevron-down {
+  right: -3px;
 }
 .nhsuk-header__menu-toggle:focus {
   text-decoration: none;
@@ -4892,6 +5034,8 @@ b {
   margin: 0 16px; /* [1] */
   max-width: 960px; /* [2] */
   /* [4] */
+  display: flex;
+  gap: 24px;
   width: 100%;
 }
 @media (min-width: 48.0625em) {
@@ -4906,7 +5050,6 @@ b {
 }
 @media (min-width: 48.0625em) {
   .nhsuk-header__navigation-list {
-    display: flex;
     justify-content: space-between;
   }
 }
@@ -4920,6 +5063,16 @@ b {
 
 .nhsuk-navigation-container {
   position: relative;
+}
+@media print {
+  .nhsuk-navigation-container {
+    display: none;
+  }
+}
+@media (max-width: 40.0525em) {
+  .nhsuk-navigation-container {
+    margin-top: -20px;
+  }
 }
 
 .nhsuk-header__drop-down {
@@ -4937,19 +5090,38 @@ b {
   }
 }
 .nhsuk-header__drop-down .nhsuk-header__navigation-link {
+  margin: 0 16px; /* [1] */
+  max-width: 960px; /* [2] */
+  /* [4] */
+  padding: 12px 0;
+}
+@media (min-width: 48.0625em) {
+  .nhsuk-header__drop-down .nhsuk-header__navigation-link {
+    margin: 0 32px; /* [3] */
+  }
+}
+@media (min-width: 1024px) {
+  .nhsuk-header__drop-down .nhsuk-header__navigation-link {
+    margin: 0 auto;
+  }
+}
+.nhsuk-header__drop-down .nhsuk-header__navigation-link:link {
   color: #005eb8;
-  padding: 12px 16px;
+}
+.nhsuk-header__drop-down .nhsuk-header__navigation-link:visited {
+  color: #005eb8;
+}
+.nhsuk-header__drop-down .nhsuk-header__navigation-link:hover {
+  color: #7c2855;
+}
+.nhsuk-header__drop-down .nhsuk-header__navigation-link:active {
+  color: #002f5c;
+}
+.nhsuk-header__drop-down .nhsuk-header__navigation-link:focus {
+  color: #212b32;
 }
 .nhsuk-header__drop-down .nhsuk-header__navigation-item {
   border-top: 1px solid #f0f4f5;
-  margin-bottom: 0;
-}
-@media (min-width: 61.875em) {
-  .nhsuk-header__drop-down .nhsuk-header__navigation-item {
-    border-top: 0;
-    margin: 0;
-    text-align: center;
-  }
 }
 
 .nhsuk-header__drop-down--hidden {
@@ -4968,6 +5140,12 @@ b {
 @media (min-width: 48.0625em) {
   .nhsuk-header__navigation-item--home {
     display: none;
+  }
+}
+
+@media (min-width: 40.0625em) {
+  .nhsuk-header__navigation-list {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
   }
 }
 
@@ -5154,8 +5332,8 @@ b {
 }
 @media print {
   .nhsuk-header__service-name {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 61.875em) {
@@ -5173,13 +5351,9 @@ b {
     * These are the styles for the transactional header variants.
 */
 .nhsuk-header__transactional-service-name {
+  margin-bottom: -4px;
   padding-left: 16px;
-  padding-top: 3px;
-}
-@media (max-width: 40.0525em) {
-  .nhsuk-header__transactional-service-name {
-    padding-bottom: 16px;
-  }
+  padding-top: 2px;
 }
 @media (max-width: 40.0525em) {
   .nhsuk-header__transactional-service-name {
@@ -5222,8 +5396,8 @@ b {
 }
 @media print {
   .nhsuk-header__transactional-service-name--link {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-header__transactional-service-name--link:hover {
@@ -5275,6 +5449,9 @@ b {
 }
 .nhsuk-header--white .nhsuk-navigation-container {
   background-color: #005eb8;
+}
+.nhsuk-header--white .nhsuk-navigation .nhsuk-header__navigation-list {
+  border-top: none;
 }
 .nhsuk-header--white .nhsuk-logo .nhsuk-logo__background {
   fill: #005eb8;
@@ -5570,8 +5747,8 @@ b {
 }
 @media print {
   .nhsuk-hint {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -5654,8 +5831,8 @@ b {
 }
 @media print {
   .nhsuk-image__caption {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 
@@ -5694,8 +5871,8 @@ b {
 }
 @media print {
   .nhsuk-input {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-input:focus {
@@ -5786,8 +5963,8 @@ b {
 @media print {
   .nhsuk-input__prefix,
   .nhsuk-input__suffix {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (max-width: 19.99em) {
@@ -5894,8 +6071,8 @@ b {
 }
 @media print {
   .nhsuk-label {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -5911,57 +6088,57 @@ b {
 .nhsuk-label--xl {
   font-size: 32px;
   font-size: 2rem;
-  line-height: 1.25;
+  line-height: 1.1875;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--xl {
     font-size: 48px;
     font-size: 3rem;
-    line-height: 1.16667;
+    line-height: 1.125;
   }
 }
 @media print {
   .nhsuk-label--xl {
-    font-size: 32pt;
+    font-size: 26pt;
     line-height: 1.15;
   }
 }
 
 .nhsuk-label--l {
-  font-size: 24px;
-  font-size: 1.5rem;
-  line-height: 1.33333;
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 1.22222;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--l {
-    font-size: 32px;
-    font-size: 2rem;
-    line-height: 1.25;
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.16667;
   }
 }
 @media print {
   .nhsuk-label--l {
-    font-size: 24pt;
-    line-height: 1.05;
+    font-size: 20pt;
+    line-height: 1.2;
   }
 }
 
 .nhsuk-label--m {
-  font-size: 20px;
-  font-size: 1.25rem;
-  line-height: 1.4;
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
 }
 @media (min-width: 40.0625em) {
   .nhsuk-label--m {
-    font-size: 24px;
-    font-size: 1.5rem;
-    line-height: 1.33333;
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
   }
 }
 @media print {
   .nhsuk-label--m {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 17pt;
+    line-height: 1.25;
   }
 }
 
@@ -5981,8 +6158,8 @@ b {
 }
 @media print {
   .nhsuk-label--s {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -6107,13 +6284,13 @@ b {
   .nhsuk-pagination__title {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-pagination__title {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 @media print {
@@ -6138,8 +6315,8 @@ b {
 }
 @media print {
   .nhsuk-pagination__page {
-    font-size: 14pt;
-    line-height: 1.2;
+    font-size: 12pt;
+    line-height: 1.3;
   }
 }
 
@@ -6171,8 +6348,8 @@ b {
 }
 @media print {
   .nhsuk-checkboxes__item {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -6284,8 +6461,8 @@ b {
 }
 @media print {
   .nhsuk-checkboxes__divider {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -6347,8 +6524,8 @@ b {
 }
 @media print {
   .nhsuk-radios__item {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -6482,8 +6659,8 @@ b {
 }
 @media print {
   .nhsuk-radios__divider {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -6510,6 +6687,14 @@ b {
 /* ==========================================================================
    COMPONENTS/ #SELECT
    ========================================================================== */
+/**
+ * Select input sizing
+ * 1. Uses rems so that safari input scales with font size
+ * 2. This min-width was chosen because:
+ *    - it makes the Select wider than it is tall (which is what users expect)
+ *    - 20ex + 3ex matches the 'width-10' variant of the input component
+ *    - it fits comfortably on screens as narrow as 240px wide
+ */
 .nhsuk-select {
   font-weight: 400;
   font-size: 16px;
@@ -6517,7 +6702,8 @@ b {
   line-height: 1.5;
   border: 2px solid #4c6272;
   box-sizing: border-box;
-  min-height: 40px;
+  height: 2.5rem; /* [1] */
+  min-width: 23ex; /* [2] */
   max-width: 100%;
   padding: 4px;
 }
@@ -6530,8 +6716,8 @@ b {
 }
 @media print {
   .nhsuk-select {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-select:focus {
@@ -6602,8 +6788,8 @@ b {
 }
 @media print {
   .nhsuk-summary-list {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 @media (min-width: 40.0625em) {
@@ -6732,6 +6918,7 @@ b {
  * Table container is used to ensure the table does not break the container.
  *
  * 1. Margin is removed so there isn't double spacing.
+ * 2. XS size not added because it matches the table header, so it'd be bad for hierarchy
  */
 .nhsuk-table-container {
   margin-bottom: 40px;
@@ -6750,6 +6937,83 @@ b {
   margin: 0; /* [1] */
 }
 
+.nhsuk-table__caption--xl {
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.1875;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-table__caption--xl {
+    font-size: 48px;
+    font-size: 3rem;
+    line-height: 1.125;
+  }
+}
+@media print {
+  .nhsuk-table__caption--xl {
+    font-size: 26pt;
+    line-height: 1.15;
+  }
+}
+
+.nhsuk-table__caption--l {
+  font-size: 27px;
+  font-size: 1.6875rem;
+  line-height: 1.22222;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-table__caption--l {
+    font-size: 36px;
+    font-size: 2.25rem;
+    line-height: 1.16667;
+  }
+}
+@media print {
+  .nhsuk-table__caption--l {
+    font-size: 20pt;
+    line-height: 1.2;
+  }
+}
+
+.nhsuk-table__caption--m {
+  font-size: 22px;
+  font-size: 1.375rem;
+  line-height: 1.31818;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-table__caption--m {
+    font-size: 26px;
+    font-size: 1.625rem;
+    line-height: 1.23077;
+  }
+}
+@media print {
+  .nhsuk-table__caption--m {
+    font-size: 17pt;
+    line-height: 1.25;
+  }
+}
+
+.nhsuk-table__caption--s {
+  font-size: 19px;
+  font-size: 1.1875rem;
+  line-height: 1.42105;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-table__caption--s {
+    font-size: 22px;
+    font-size: 1.375rem;
+    line-height: 1.36364;
+  }
+}
+@media print {
+  .nhsuk-table__caption--s {
+    font-size: 15pt;
+    line-height: 1.25;
+  }
+}
+
+/* [2] */
 /* Table row hover
 ========================================================================== */
 /**
@@ -6821,13 +7085,13 @@ b {
   .nhsuk-table__heading-tab {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-table__heading-tab {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 @media (max-width: 40.0525em) {
@@ -6878,6 +7142,12 @@ b {
   width: 1px;
   /* [1] */
 }
+.nhsuk-table-responsive thead::before {
+  content: " ";
+}
+.nhsuk-table-responsive thead::after {
+  content: " ";
+}
 @media (min-width: 48.0625em) {
   .nhsuk-table-responsive thead {
     clip: auto;
@@ -6889,6 +7159,9 @@ b {
     position: relative;
     width: auto;
     /* [2] */
+  }
+  .nhsuk-table-responsive thead:before, .nhsuk-table-responsive thead:after {
+    content: "";
   }
 }
 .nhsuk-table-responsive .nhsuk-table__body .nhsuk-table-responsive__heading {
@@ -6987,7 +7260,7 @@ b {
 }
 @media print {
   .nhsuk-tag {
-    font-size: 14pt;
+    font-size: 12pt;
     line-height: 1;
   }
 }
@@ -7060,6 +7333,116 @@ b {
   border: 0;
 }
 
+/**
+ * Original SASS taken from GOV.UK Design System
+ * https://github.com/alphagov/govuk-frontend/blob/main/packages/govuk-frontend/src/govuk/components/task-list/_index.scss
+ */
+.nhsuk-task-list {
+  font-weight: 400;
+  font-size: 16px;
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 24px;
+  padding: 0;
+  list-style-type: none;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-task-list {
+    font-size: 19px;
+    font-size: 1.1875rem;
+    line-height: 1.47368;
+  }
+}
+@media print {
+  .nhsuk-task-list {
+    font-size: 13pt;
+    line-height: 1.25;
+  }
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-task-list {
+    margin-bottom: 32px;
+  }
+}
+
+.nhsuk-task-list__item {
+  display: table;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #d8dde0;
+}
+
+.nhsuk-task-list__item:first-child {
+  border-top: 1px solid #d8dde0;
+}
+
+.nhsuk-task-list__item--with-link:hover {
+  background: #dee7e9;
+}
+
+.nhsuk-task-list__name-and-hint {
+  display: table-cell;
+  vertical-align: top;
+  color: #212b32;
+}
+
+.nhsuk-task-list__status {
+  display: table-cell;
+  padding-left: 8px;
+  text-align: right;
+  vertical-align: top;
+  color: #212b32;
+}
+
+.nhsuk-task-list__status--completed,
+.nhsuk-task-list__status--cannot-start-yet {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-top: 6px;
+  text-decoration: none;
+}
+@media (min-width: 40.0625em) {
+  .nhsuk-task-list__status--completed,
+  .nhsuk-task-list__status--cannot-start-yet {
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1;
+  }
+}
+@media print {
+  .nhsuk-task-list__status--completed,
+  .nhsuk-task-list__status--cannot-start-yet {
+    font-size: 12pt;
+    line-height: 1;
+  }
+}
+
+.nhsuk-task-list__status--cannot-start-yet {
+  color: #4c6272;
+}
+
+.nhsuk-task-list__link::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.nhsuk-task-list__hint {
+  margin-top: 4px;
+  color: #4c6272;
+}
+
 /* ==========================================================================
    COMPONENTS/ #TEXTAREA
    ========================================================================== */
@@ -7087,8 +7470,8 @@ b {
 }
 @media print {
   .nhsuk-textarea {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-textarea:focus {
@@ -7164,13 +7547,13 @@ b {
   .nhsuk-warning-callout__label {
     font-size: 24px;
     font-size: 1.5rem;
-    line-height: 1.33333;
+    line-height: 1.29167;
   }
 }
 @media print {
   .nhsuk-warning-callout__label {
-    font-size: 18pt;
-    line-height: 1.15;
+    font-size: 16pt;
+    line-height: 1.25;
   }
 }
 @media (max-width: 40.0525em) {
@@ -7243,8 +7626,8 @@ b {
 }
 @media print {
   .nhsuk-tabs__title {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 
@@ -7276,8 +7659,8 @@ b {
 }
 @media print {
   .nhsuk-tabs__list-item {
-    font-size: 14pt;
-    line-height: 1.15;
+    font-size: 13pt;
+    line-height: 1.25;
   }
 }
 .nhsuk-tabs__list-item:before {
@@ -7406,8 +7789,6 @@ b {
   .js-enabled .nhsuk-tabs__panel > :last-child {
     margin-bottom: 0;
   }
-}
-@media (min-width: 40.0625em) {
   .js-enabled .nhsuk-tabs__panel--hidden {
     display: none;
   }
