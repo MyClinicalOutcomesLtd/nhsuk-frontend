@@ -7,7 +7,7 @@ module.exports = {
   debug: false,
   debugWindow: false,
   dockerCommandTemplate: 'docker run --rm --network=host --mount type=bind,source="{cwd}",target=/src backstopjs/backstopjs:{version} {backstopCommand} {args}',
-  engine: 'puppeteer',
+  engine: 'playwright',
   engineOptions: {
     args: ['--no-sandbox'],
   },
@@ -203,6 +203,10 @@ module.exports = {
     {
       label: 'Footer (columns)',
       url: `${TEST_URL}/footer/footer-in-columns.html`,
+    },
+    {
+      label: 'Footer (custom copyright statement)',
+      url: `${TEST_URL}/footer/custom-copyright.html`,
     },
     {
       label: 'Fieldset',
@@ -446,6 +450,14 @@ module.exports = {
     {
       label: 'Tag',
       url: `${TEST_URL}/tag/index.html`,
+    },
+    {
+      label: 'Task list',
+      url: `${TEST_URL}/task-list/index.html`,
+    },
+    {
+      label: 'Task list with multiple sections',
+      url: `${TEST_URL}/task-list/multiple-sections.html`,
     },
     {
       label: 'Textarea',

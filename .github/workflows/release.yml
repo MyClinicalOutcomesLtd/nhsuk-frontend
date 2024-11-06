@@ -15,10 +15,10 @@ jobs:
         with:
           persist-credentials: false
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@v4
         with:
-          node-version: 16
-          registry-url: https://npm.pkg.github.com
+          node-version: 20
+          registry-url: https://npm.pkg.github.com/
 
       - name: Install dependencies
         run: npm install
